@@ -52,7 +52,6 @@ function IndexHeader() {
               ></img>
             </a>
             . Coded by{" MetaWeather "}
-            
             .
           </h6>
         </Container>
