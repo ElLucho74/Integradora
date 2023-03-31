@@ -81,24 +81,15 @@ function IndexNavbar() {
             isOpen={collapseOpen}
             navbar
           >
+             <Link className="btn btn-light" to="/datos">
+              Log-in
+            </Link>
             <Nav navbar>
-              <NavItem>
-                <NavLink
-                  href="#pablo"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document
-                      .getElementById("download-section")
-                      .scrollIntoView();
-                  }}
-                >
-                 <p>Síguenos en nuestras redes sociales!</p>
-                 
-                </NavLink>
-              </NavItem>
+           
             
               <NavItem>
-                <NavLink
+             
+                <NavLink 
                   href="https://twitter.com/GobiernoMX"
                   target="_blank"
                   id="twitter-tooltip"
@@ -136,6 +127,7 @@ function IndexNavbar() {
                   Siguenos en nuestra pagina de Instagram
                 </UncontrolledTooltip>
               </NavItem>
+              
             </Nav>
           </Collapse>
         </Container>

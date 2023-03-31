@@ -41,7 +41,7 @@ function LoginPage() {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/login.jpg") + ")"
+            backgroundImage: "url(" + require("assets/img/cultivo_1.jpeg") + ")"
           }}
         ></div>
         <div className="content">
@@ -70,7 +70,7 @@ function LoginPage() {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="First Name..."
+                        placeholder="Inserte su usuario"
                         type="text"
                         onFocus={() => setFirstFocus(true)}
                         onBlur={() => setFirstFocus(false)}
@@ -88,7 +88,7 @@ function LoginPage() {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Last Name..."
+                        placeholder="Ingrese su contraseña"
                         type="text"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
@@ -104,29 +104,13 @@ function LoginPage() {
                       onClick={(e) => e.preventDefault()}
                       size="lg"
                     >
-                      Get Started
+                      Iniciar Sesión
                     </Button>
                     <div className="pull-left">
-                      <h6>
-                        <a
-                          className="link"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          Create Account
-                        </a>
-                      </h6>
+                      
                     </div>
                     <div className="pull-right">
-                      <h6>
-                        <a
-                          className="link"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          Need Help?
-                        </a>
-                      </h6>
+                      
                     </div>
                   </CardFooter>
                 </Form>
@@ -134,7 +118,7 @@ function LoginPage() {
             </Col>
           </Container>
         </div>
-        <TransparentFooter />
+      
       </div>
     </>
   );
