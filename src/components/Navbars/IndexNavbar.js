@@ -41,6 +41,7 @@ function IndexNavbar() {
   });
   return (
     <>
+    
       {collapseOpen ? (
         <div
           id="bodyClick"

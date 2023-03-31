@@ -19,14 +19,14 @@ const items = [
     caption: "Instituto Tecnologico del Valle del Guadiana"
   },
   {
-    src: 'https://tecolotito.elsiglodedurango.com.mx/i/2015/01/415115.jpeg',
-    altText: "poner algo chido",
-    caption: "poner algo chido"
+    src: require('../../../src/assets/img/cultivo_1.jpeg'),
+    altText: "Cahuitl en los cultivos",
+    caption: "Cahuitl en los cultivos"
   },
   {
-    src: 'https://tecolotito.elsiglodedurango.com.mx/i/2015/01/415115.jpeg',
-    altText: "otra cosa chida",
-    caption: "otra cosa chida"
+    src: require('../../../src/assets/img/panardos.jpeg'),
+    altText: "Equipo de Cáhuitl",
+    caption: "Equipo de Cáhuitl"
   }
 ];
 
@@ -58,7 +58,7 @@ function CarouselSection() {
       <div className="section" id="carousel">
         <Container>
           <div className="title">
-            <h4>Carousel</h4>
+            <h4>Cultivos del Instituto Tecnológico del Valle del Guadiana</h4>
           </div>
           <Row className="justify-content-center">
             <Col lg="8" md="12">
