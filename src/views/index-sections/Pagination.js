@@ -21,6 +21,9 @@ function PaginationSection() {
   const [pills, setPills] = React.useState("2");
   return (
     <>
+     <br></br>
+    <br></br>
+    <br></br>
       <div className="section section-pagination">
         <Container>
           <Row>
@@ -41,12 +44,12 @@ function PaginationSection() {
               </Col>
             <Col sm="6">
               <h4>Cáhuitl en accion</h4>
-              <img src={require("../../assets/img/estacion.png")} height="440px" ></img>
+              <img src={require("../../assets/img/estazione.jpeg")} height="440px" ></img>
             </Col>
           </Row>
           <br></br>
           <div className="space"></div>
-          <h4>Notifications</h4>
+         
         </Container>
       </div>
     </>

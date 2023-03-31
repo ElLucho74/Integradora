@@ -25,6 +25,7 @@ import SignUp from "./index-sections/SignUp.js";
 import Examples from "./index-sections/Examples.js";
 import Download from "./index-sections/Download.js";
 
+
 function Index() {
   React.useEffect(() => {
     document.body.classList.add("index-page");
@@ -39,6 +40,7 @@ function Index() {
   });
   return (
     <>
+    
       <IndexNavbar />
       <div className="wrapper">
         <IndexHeader />
@@ -46,13 +48,12 @@ function Index() {
         
           
           <Navbars />
-          <Tabs />
+          
           <Pagination />
-          <Notifications />
-          <Typography />
-          <Javascript />
+          <Examples/>
+          
           <Carousel />
-          <NucleoIcons />
+          
           
      
           
