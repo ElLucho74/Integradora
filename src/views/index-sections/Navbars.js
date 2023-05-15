@@ -35,8 +35,7 @@ function Navbars() {
             </Col>
             <Col className="mt-5">
               <br></br>
-            <img src={require("assets/img/guapitos.jpeg")}
-                ></img>
+            <img src={require("assets/img/guapitos.jpeg")}></img>
             </Col>
            
           </Row>

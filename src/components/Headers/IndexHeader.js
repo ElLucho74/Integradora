@@ -39,14 +39,6 @@ function IndexHeader() {
             <h3></h3>
           </div>
           <h6 className="category category-absolute">
-            Designed by{"lamundo"}
-            <a href="http://invisionapp.com/?ref=creativetim" target="_blank">
-              <img
-                alt="..."
-                className="invision-logo"
-                src={require("assets/img/invision-white-slim.png")}
-              ></img>
-            </a>
             . Coded by{" MetaWeather "}
             .
           </h6>
