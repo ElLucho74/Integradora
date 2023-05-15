@@ -30,15 +30,11 @@ function IndexHeader() {
           style={{
             backgroundImage: "url(" + require("../Headers/fondiwiris.jpeg") + ")"
           }}
-          ref={pageHeader}
+         
         ></div>
         <Container>
           <div className="content-center brand">
-            <img
-              alt="..."
-              className="n-logo"
-              src={require("assets/img/now-logo.png")}
-            ></img>
+            
             <h1 className="h1-seo">Cáhuitl</h1>
             <h3></h3>
           </div>

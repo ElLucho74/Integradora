@@ -51,10 +51,7 @@ root.render(
           path="/login-page"
           render={(props) => <LoginPage {...props} />}
         />
-         <Route
-          path="/datos"
-          render={(props) => <Datos {...props} />}
-        />
+        
 
         
         <Redirect to="/index" />

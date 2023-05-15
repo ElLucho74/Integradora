@@ -1,13 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 // reactstrap components
 import {
-  Button,
+  
   Collapse,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
+ 
   NavbarBrand,
   Navbar,
   NavItem,
@@ -55,11 +52,18 @@ function IndexNavbar() {
         <Container>
           <div className="navbar-translate">
             <NavbarBrand
-              href="https://demos.creative-tim.com/now-ui-kit-react/#/index?ref=nukr-index-navbar"
-              target="_blank"
+           
+              
               id="navbar-brand"
             >
-              Tecnología en el Campo
+              <img
+              alt="..."
+              className="n-logo"
+              src={require("assets/img/now-logo.png")}
+              height={"20%"}
+              width={"30%"}
+            ></img>
+              
             </NavbarBrand>
             
             <button
@@ -81,9 +85,7 @@ function IndexNavbar() {
             isOpen={collapseOpen}
             navbar
           >
-             <Link className="btn btn-light" to="/datos">
-              Log-in
-            </Link>
+            
             <Nav navbar>
            
             
