@@ -29,6 +29,7 @@ import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
+import Datos from "views/index-sections/Datos"
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -50,6 +51,11 @@ root.render(
         <Route
           path="/login-page"
           render={(props) => <LoginPage {...props} />}
+        />
+
+        <Route
+          path="/datos-page"
+          render={(props) => <Datos {...props} />}
         />
         
 
