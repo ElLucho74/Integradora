@@ -77,7 +77,7 @@ function Datos() {
                             <p className='titulo'> {item.Humedad_cultivo}% </p>
                         </div>
                     </div>
-                    <p>Velocidad del viento: {item.Velocidad_viento}</p>
+                    <p className='espacio'>Velocidad del viento: {item.Velocidad_viento}</p>
                     </div>
                 ))}
                 </div>
