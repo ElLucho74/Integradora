@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ExportExcel from 'react-export-excel';
 import styles from '../themes/Theme.css'
+import { useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import { Alert } from 'reactstrap';
 
@@ -25,8 +27,32 @@ const ExcelColumn = ExportExcel.ExcelColumn;
 
 function Datos() {
 
+    const username = localStorage.getItem('username');
+
     const [data, setData] = useState(null);
     const [datos, setDatos] = useState([]);
+
+    const history = useHistory();
+
+    useEffect(() => {
+        const isLoggedIn = !!localStorage.getItem('username');
+        if (!isLoggedIn) {
+          toast.error('No has iniciado sesión');
+          history.push('/login-page');
+        }
+      }, []);
+
+    const handleLogout = () => {
+        // Eliminar los datos del localStorage
+        localStorage.removeItem('username');
+    
+        // Mostrar alerta utilizando react-toastify
+        toast.info('Se cerró la sesión');
+    
+        // Redireccionar al inicio de sesión u otra página
+        history.push('/login-page'); // Redirige al componente de inicio de sesión
+      };
+    
 
     const fetchData = async () => {
         try {
@@ -51,8 +77,9 @@ function Datos() {
     return ( 
     <div className='contenedor'>
         <Alert color="primary" align="center">
-            Bienvenido
+            Bienvenido {username}
 </Alert>
+<div align="right"><Button size="lg" color="danger" onClick={handleLogout}>Cerrar sesión</Button></div>
             <div>
             {data ? (
                 <div>
@@ -77,7 +104,36 @@ function Datos() {
                             <p className='titulo'> {item.Humedad_cultivo}% </p>
                         </div>
                     </div>
-                    <p className='espacio'>Velocidad del viento: {item.Velocidad_viento}</p>
+                    <h4 >Velocidad del viento: {item.Velocidad_viento}</h4>
+                    <div className='speedometer-container'>
+                        <div className='center-point'></div>
+                        <div className='speedometer-center-hide'></div>
+                        <div className='speedometer-bottom-hide'></div>
+                            <div className='arrow-container'>
+                                <div className='arrow-wrapper'>
+                                    <div className='arrow'></div>
+                                </div>
+                            </div>
+                        <div className='speedometer-scale speedometer-scale-1'></div>
+                        <div className='speedometer-scale speedometer-scale-2'></div>
+                        <div className='speedometer-scale speedometer-scale-3'></div>
+                        <div className='speedometer-scale speedometer-scale-4'></div>
+                        <div className='speedometer-scale speedometer-scale-5'></div>
+                        <div className='speedometer-scale speedometer-scale-6'></div>
+                        <div className='speedometer-scale speedometer-scale-7'></div>
+                        <div className='speedometer-scale speedometer-scale-8'></div>
+                        <div className='speedometer-scale speedometer-scale-9'></div>
+                        <div className='speedometer-scale speedometer-scale-10'></div>
+                        <div className='speedometer-scale speedometer-scale-11'></div>
+                        <div className='speedometer-scale speedometer-scale-12'></div>
+                        <div className='speedometer-scale speedometer-scale-13'></div>
+                        <div className='speedometer-scale speedometer-scale-14'></div>
+                        <div className='speedometer-scale speedometer-scale-15'></div>
+                        <div className='speedometer-scale speedometer-scale-16'></div>
+                        <div className='speedometer-scale speedometer-scale-17'></div>
+                        <div className='speedometer-scale speedometer-scale-18'></div>
+                        <div className='speedometer-scale speedometer-scale-19'></div>
+                    </div>
                     </div>
                 ))}
                 </div>

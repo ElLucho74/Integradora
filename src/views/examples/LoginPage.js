@@ -1,5 +1,8 @@
-import React from "react";
-
+import React, {useState, useEffect} from "react";
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import { useHistory } from "react-router-dom";
+import 'react-toastify/dist/ReactToastify.css';
 // reactstrap components
 import {
   Button,
@@ -21,6 +24,50 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import TransparentFooter from "components/Footers/TransparentFooter.js";
 
 function LoginPage() {
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const history = useHistory();
+
+  useEffect(() => {
+    // Borrar los datos del localStorage al cargar la página de inicio de sesión
+    localStorage.clear();
+  }, []);
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('https://inte-theta.vercel.app/api/login', {
+        username,
+        password,
+      });
+
+      if (response.status === 200) {
+        console.log(response.data); // Mostrar respuesta en la consola
+
+        // Redireccionar a otra página
+        localStorage.setItem('username', username);
+        // Mostrar alerta utilizando react-toastify
+        toast.success('Inicio de sesión exitoso', {
+          autoClose: 1000,
+          onClose: () => {
+            // Redireccionar a otra página después de la duración especificada
+            history.push('/datos-page');
+          },
+          position: toast.POSITION.TOP_CENTER
+        });
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error('Error en el inicio de sesión', {
+        position: toast.POSITION.TOP_CENTER
+      });
+    }
+  };
+
+
+
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
   React.useEffect(() => {
@@ -48,7 +95,7 @@ function LoginPage() {
           <Container>
             <Col className="ml-auto mr-auto" md="4">
               <Card className="card-login card-plain">
-                <Form action="" className="form" method="">
+                <Form className="form">
                   <CardHeader className="text-center">
                     <div className="logo-container">
                       <img
@@ -72,6 +119,8 @@ function LoginPage() {
                       <Input
                         placeholder="Inserte su usuario"
                         type="text"
+                        onChange={e => setUsername(e.target.value)}
+                        value={ username }
                         onFocus={() => setFirstFocus(true)}
                         onBlur={() => setFirstFocus(false)}
                       ></Input>
@@ -89,7 +138,9 @@ function LoginPage() {
                       </InputGroupAddon>
                       <Input
                         placeholder="Ingrese su contraseña"
-                        type="text"
+                        type="password"
+                         onChange={e => setPassword(e.target.value)}
+                        value={ password }
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
                       ></Input>
@@ -100,12 +151,12 @@ function LoginPage() {
                       block
                       className="btn-round"
                       color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
                       size="lg"
+                      onClick={handleLogin}
                     >
                       Iniciar Sesión
                     </Button>
+                    <ToastContainer />
                     <div className="pull-left">
                       
                     </div>

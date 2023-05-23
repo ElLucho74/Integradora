@@ -29,3 +29,108 @@
   .espacio{
     width: 100%;
   }
+  .speedometer-container{
+    width: 300px;
+    height: 300px;
+    border: 3px solid black;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+  }
+  .center-point{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 137px;
+    left: 137px;
+  }
+  .speedometer-scale{
+    width: 8px;
+    height: 280px;
+    background-color: black;
+    position: absolute;
+    left: 143px;
+    top: 7px;
+    transform: rotate(-90deg);
+  }
+  .speedometer-scale-1{
+    transform: rotate(-80deg);
+  }
+  .speedometer-scale-2{
+    transform: rotate(-70deg);
+  }
+  .speedometer-scale-3{
+    transform: rotate(-60deg);
+  }
+  .speedometer-scale-4{
+    transform: rotate(-50deg);
+  }
+  .speedometer-scale-5{
+    transform: rotate(-40deg);
+  }
+  .speedometer-scale-6{
+    transform: rotate(-30deg);
+  }
+  .speedometer-scale-7{
+    transform: rotate(-20deg);
+  }
+  .speedometer-scale-8{
+    transform: rotate(-10deg);
+  }
+  .speedometer-scale-9{
+    transform: rotate(0deg);
+  }
+  .speedometer-scale-10{
+    transform: rotate(10deg);
+  }
+  .speedometer-scale-11{
+    transform: rotate(20deg);
+  }
+  .speedometer-scale-12{
+    transform: rotate(30deg);
+  }
+  .speedometer-scale-13{
+    transform: rotate(40deg);
+  }
+  .speedometer-scale-14{
+    transform: rotate(50deg);
+  }
+  .speedometer-scale-15{
+    transform: rotate(60deg);
+  }
+  .speedometer-scale-16{
+    transform: rotate(70deg);
+  }
+  .speedometer-scale-17{
+    transform: rotate(80deg);
+  }
+  .speedometer-scale-18{
+    transform: rotate(90deg);
+  }
+  .speedometer-scale-19{
+    transform: rotate(-90deg);
+  }
+  .speedometer-center-hide{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    z-index: 9;
+  }
+  .speedometer-bottom-hide{
+    width: 320px;
+    height: 320px;
+    background-color: white;
+    position: absolute;
+    z-index: 11;
+    top: 160px;
+    border-top: 1px solid;
+  }
+  .arrow-container{
+    width: 160px;
+  }
