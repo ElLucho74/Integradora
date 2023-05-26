@@ -132,11 +132,10 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
               <NavLink
-                  href="/login-page"
                   id="login"
                 >
-                  <i className="now-ui-icons users_single-02"></i>
-                  <p className="d-lg-none d-xl-none"></p>
+                  <Link to="/login-page"> <i className="now-ui-icons users_single-02"></i></Link>
+                  <p className="d-lg-none d-xl-none">Iniciar Sesion</p>
                 </NavLink>
                 <UncontrolledTooltip target="#login">
                   Iniciar Sesion
