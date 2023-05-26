@@ -83,7 +83,6 @@ function LoginPage() {
   }, []);
   return (
     <>
-      <ExamplesNavbar />
       <div className="page-header clear-filter" filter-color="blue">
         <div
           className="page-header-image"
@@ -97,12 +96,10 @@ function LoginPage() {
               <Card className="card-login card-plain">
                 <Form className="form">
                   <CardHeader className="text-center">
-                    <div className="logo-container">
                       <img
                         alt="..."
                         src={require("assets/img/now-logo.png")}
                       ></img>
-                    </div>
                   </CardHeader>
                   <CardBody>
                     <InputGroup

@@ -79,7 +79,7 @@ function Datos() {
         <Alert color="primary" align="center">
             Bienvenido {username}
 </Alert>
-<div align="right"><Button size="lg" color="danger" onClick={handleLogout}>Cerrar sesión</Button></div>
+<div align="right"><Button color="danger" onClick={handleLogout}> <i className='now-ui-icons users_circle-08'></i> Cerrar sesión</Button></div>
             <div>
             {data ? (
                 <div>
@@ -104,13 +104,19 @@ function Datos() {
                             <p className='titulo'> {item.Humedad_cultivo}% </p>
                         </div>
                     </div>
-                    <h4 >Velocidad del viento: {item.Velocidad_viento}</h4>
+                    <h4 >Velocidad del viento:</h4>
                     <div className='speedometer-container'>
+                        <div className='speedometer-text'>
+                            <div className='static'></div>
+                            <div className='dynamic'>
+                                <span className='km'>{item.Velocidad_viento} km/h</span>
+                            </div>
+                        </div>
                         <div className='center-point'></div>
                         <div className='speedometer-center-hide'></div>
                         <div className='speedometer-bottom-hide'></div>
                             <div className='arrow-container'>
-                                <div className='arrow-wrapper'>
+                                <div className='arrow-wrapper' style={{ transform: `rotate(${item.Velocidad_viento}deg)` } }>
                                     <div className='arrow'></div>
                                 </div>
                             </div>
@@ -141,6 +147,7 @@ function Datos() {
                 <p>Loading...</p>
             )}
             </div>
+            <p className='espacio'></p>
             <p>Registro de los ultimos 30 dias {''} <i className="now-ui-icons arrows-1_minimal-right"></i> {''}
             <ExcelFile element={<Button className="btn-round" size="lg" color="success" outline> <i className="now-ui-icons arrows-1_cloud-download-93"></i> Exportar a Excel</Button>} filename="Registros 30 dias" >
                     <ExcelSheet data={datos} name="Registros 30 dias">
@@ -154,7 +161,7 @@ function Datos() {
                     </ExcelSheet>
                 </ExcelFile>
                 {' '}
-                18 mb
+                60 mb aprox.
                 </p>
     </div> 
     );
