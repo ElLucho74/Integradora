@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -25,12 +26,11 @@ function PaginationSection() {
               <h4>Acerca de nuestro Proyecto</h4>
               <h5 style={{textAlign:"justify"}}>
                 
-                Cáhuitl del náhuat: "Medicion del Timpo" 
+                Cáhuitl del náhuat: "Medicion del Tiempo" 
                 es una estación meteorológica creada con el objetivo de hacer un pronostico del 
                 tiempo en el lugar donde se encuentren cultivos exteriores, con el fin de crear un historial y hacer predicciones 
                 para evitar perdidas de los cultivos por el cambio climatico.
               </h5>
-              
               <br></br>
               
               

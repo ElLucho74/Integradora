@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -129,6 +130,18 @@ function IndexNavbar() {
                   Siguenos en nuestra pagina de Instagram
                 </UncontrolledTooltip>
               </NavItem>
+              <NavItem>
+              <NavLink
+                  id="login"
+                >
+                  <Link to="/login-page"> <i className="now-ui-icons users_single-02"></i></Link>
+                  <p className="d-lg-none d-xl-none">Iniciar Sesion</p>
+                </NavLink>
+                <UncontrolledTooltip target="#login">
+                  Iniciar Sesion
+                </UncontrolledTooltip>
+                
+                </NavItem>
               
             </Nav>
           </Collapse>

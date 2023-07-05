@@ -47,11 +47,9 @@ root.render(
           path="/landing-page"
           render={(props) => <LandingPage {...props} />}
         />
-        
-        <Route
-          path="/login-page"
-          render={(props) => <LoginPage {...props} />}
-        />
+        <Route path="/login-page">
+          <LoginPage/>
+        </Route>
 
         <Route
           path="/datos-page"
