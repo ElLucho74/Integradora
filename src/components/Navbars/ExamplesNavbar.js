@@ -91,7 +91,7 @@ function IndexNavbar() {
               <NavItem>
              
                 <NavLink 
-                  href="https://twitter.com/GobiernoMX"
+                  href="https://twitter.com/conagua_clima"
                   target="_blank"
                   id="twitter-tooltip"
                 >
@@ -99,12 +99,12 @@ function IndexNavbar() {
                   <p className="d-lg-none d-xl-none">Twitter</p>
                 </NavLink>
                 <UncontrolledTooltip target="#twitter-tooltip">
-                  Sigue nuestra cuenta de twitter
+                  Sigue la cuenta de Conagua Clima para estar al tanto del clima en el país!
                 </UncontrolledTooltip>
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                  href="https://www.facebook.com/miguelangel.moranvazques"
                   target="_blank"
                   id="facebook-tooltip"
                 >
@@ -117,7 +117,7 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://www.youtube.com/watch?v=t3217H8JppI"
+                  href="https://www.instagram.com/luis_castro_i/"
                   target="_blank"
                   id="instagram-tooltip"
                 >
