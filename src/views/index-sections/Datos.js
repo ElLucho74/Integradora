@@ -86,6 +86,7 @@ function Datos() {
                 {data.map((item) => (
                     <div>
                     <h2 align='center'>Monitoreo en tiempo real</h2>
+                    <h2> hola desde github </h2>
                     <div className='date'> 
                         <h5>Dispositivo: {item.Dispositivo}</h5>
                          <h5>Fecha: {item.Date} Hora: {item.Hour} </h5>
